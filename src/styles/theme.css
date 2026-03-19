@@ -1,0 +1,83 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Historical Color Palette */
+  --bg-deep: #07070f;
+  --bg-mid: #0e0e1e;
+  --bg-card: #131326;
+  --bg-card2: #18182e;
+  --gold: #c9a84c;
+  --gold-light: #e8c96e;
+  --gold-dim: #8a6d2a;
+  --cream: #f0e6c8;
+  --cream-dim: #b8a98a;
+  --burgundy: #7a1f2e;
+  --red-acc: #a8364a;
+  --text: #e8dcc4;
+  --text-muted: #8a7d65;
+  --border: rgba(201, 168, 76, 0.18);
+
+  /* Font Settings */
+  --font-serif: 'Lora', Georgia, serif;
+  --font-display: 'Playfair Display', serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-size: 16px;
+}
+
+@theme inline {
+  --color-bg-deep: var(--bg-deep);
+  --color-bg-mid: var(--bg-mid);
+  --color-bg-card: var(--bg-card);
+  --color-bg-card2: var(--bg-card2);
+  --color-gold: var(--gold);
+  --color-gold-light: var(--gold-light);
+  --color-gold-dim: var(--gold-dim);
+  --color-cream: var(--cream);
+  --color-cream-dim: var(--cream-dim);
+  --color-burgundy: var(--burgundy);
+  --color-red-acc: var(--red-acc);
+  --color-text: var(--text);
+  --color-text-muted: var(--text-muted);
+  --color-border-gold: var(--border);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: var(--font-size);
+  }
+
+  body {
+    @apply bg-[#07070f] text-[#e8dcc4];
+    font-family: var(--font-serif);
+    line-height: 1.75;
+    overflow-x: hidden;
+  }
+
+  /* Noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.6;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-deep);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold-dim);
+    border-radius: 3px;
+  }
+}
