@@ -1,11 +1,99 @@
+# История без страха
 
-  # Создание сайта из файла
+Лендинг для онлайн-репетитора по истории с элегантным темным дизайном и анимациями.
 
-  This is a code bundle for Создание сайта из файла. The original project is available at https://www.figma.com/design/QAUp4JF0AlZlXSPaDfU0M8/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B0%D0%B9%D1%82%D0%B0-%D0%B8%D0%B7-%D1%84%D0%B0%D0%B9%D0%BB%D0%B0.
+## 🚀 Деплой на GitHub Pages
 
-  ## Running the code
+### Шаг 1: Создайте репозиторий на GitHub
 
-  Run `npm i` to install the dependencies.
+1. Перейдите на [GitHub](https://github.com) и войдите в свой аккаунт
+2. Нажмите на кнопку "New repository" (зеленая кнопка)
+3. Введите название репозитория (например, `history-tutor-landing`)
+4. Выберите "Public" (для бесплатного использования GitHub Pages)
+5. **НЕ** отмечайте "Add a README file" (у нас уже есть файлы)
+6. Нажмите "Create repository"
 
-  Run `npm run dev` to start the development server.
-  
+### Шаг 2: Загрузите код в репозиторий
+
+После создания репозитория GitHub покажет вам инструкции. Выполните следующие команды в терминале в папке проекта:
+
+```bash
+# Инициализируйте Git репозиторий (если еще не инициализирован)
+git init
+
+# Добавьте все файлы
+git add .
+
+# Создайте первый коммит
+git commit -m "Initial commit: История без страха landing page"
+
+# Добавьте удаленный репозиторий (замените YOUR_USERNAME и YOUR_REPO на свои данные)
+git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
+
+# Переименуйте ветку в main (если она называется master)
+git branch -M main
+
+# Загрузите код на GitHub
+git push -u origin main
+```
+
+### Шаг 3: Настройте GitHub Pages
+
+1. Перейдите в ваш репозиторий на GitHub
+2. Нажмите на "Settings" (Настройки)
+3. В левом меню найдите "Pages"
+4. В разделе "Build and deployment":
+   - **Source**: выберите "GitHub Actions"
+5. Сохраните изменения
+
+### Шаг 4: Дождитесь деплоя
+
+1. Перейдите во вкладку "Actions" в вашем репозитории
+2. Вы увидите, что запустился процесс деплоя
+3. Подождите, пока деплой завершится (обычно 2-3 минуты)
+4. После завершения ваш сайт будет доступен по адресу: `https://YOUR_USERNAME.github.io/YOUR_REPO/`
+
+## 📝 Обновление сайта
+
+Когда вы вносите изменения в код:
+
+```bash
+git add .
+git commit -m "Описание изменений"
+git push
+```
+
+GitHub автоматически пересоберет и опубликует обновленную версию!
+
+## 🛠️ Локальная разработка
+
+```bash
+# Установите зависимости
+pnpm install
+
+# Запустите dev сервер
+pnpm dev
+
+# Соберите проект
+pnpm build
+```
+
+## 📦 Технологии
+
+- React 18
+- TypeScript
+- Tailwind CSS v4
+- Vite
+- Google Fonts (Playfair Display, Lora, Cinzel)
+
+## 🎨 Особенности
+
+- Темный дизайн в исторической стилистике
+- Золотые акценты и бордовые тона
+- Плавные анимации при прокрутке
+- Полностью адаптивный дизайн
+- Оптимизированная производительность
+
+---
+
+© 2025 · Репетитор по истории · «История без страха»
